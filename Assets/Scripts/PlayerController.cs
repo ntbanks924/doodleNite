@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// Determines which direction the character should face, currently only handles left (which may be all you need).
+    /// Determines which direction the character should face, currently only handles left.
     /// </summary>
     void updatePlayerDirection() 
     {
