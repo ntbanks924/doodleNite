@@ -26,13 +26,6 @@ public class PlayerController : MonoBehaviour
 
         updatePlayerDirection();
     }
-        //movement to the right will cause sprite to flip on x-axis
-        if (inputHorizontal > 0) {
-            transform.localScale = new Vector3 (1,1);                    
-        }
-        else {
-            transform.localScale = new Vector3 (-1,1);
-        }
 
     void FixedUpdate()
     {
@@ -52,7 +45,7 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// Determines which direction the character should face, currently only handles left.
+    /// Determines which direction the character should face, currently only handles left (which may be all you need).
     /// </summary>
     void updatePlayerDirection() 
     {
