@@ -17,16 +17,16 @@ public class enemyProjectile : MonoBehaviour
     void Update()
     {
        transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
-
+        Debug.Log(transform.position + "  " + targetPosition);
        ///Destroy projectile once the target has been hit
-       if (transform.position == targetPosition)
+       if (transform.position.x == targetPosition.x && transform.position.y == targetPosition.y)
        {
-        DestroyProjectile();
+        DestroyGameObject();
        }
 
     }
 
-    void DestroyProjectile(){
+    void DestroyGameObject(){
         Destroy(gameObject);
     }    
 }
