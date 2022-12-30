@@ -10,6 +10,12 @@ public class Enemy : MonoBehaviour
     public Transform target;
     public float minDistance;
 
+    public GameObject projectile;
+    public float timeBetweenShots;
+    private float nextShotTime;
+
+    public int aiType;
+
     public void TakeDamage(int damage) {
         health -= damage;
     }
@@ -20,14 +26,27 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
 
-        ///Stop moving towards character once min distance is reached
-        if (Vector2.Distance(transform.position, target.position) > minDistance) 
-        {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-        } else
-        {
-            /// Add attack code here for dealing damage to player.
+
+        if (aiType == 1){
+            ///Move away from character to maintain min distance
+            if (Vector2.Distance(transform.position, target.position) < minDistance) 
+            {
+                transform.position = Vector2.MoveTowards(transform.position, target.position, -speed * Time.deltaTime);
+            } 
+
+            ///Pew pew pew
+            if (Time.time > nextShotTime){
+                Instantiate(projectile, transform.position, Quaternion.identity);
+                nextShotTime = Time.time + timeBetweenShots;
+            }
         }
+
+        else if (aiType == 2) {
+            ///chase player
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);                
+        }
+        
+
     }
 
 }

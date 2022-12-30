@@ -133,7 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 48432359}
   - component: {fileID: 48432360}
-  - component: {fileID: 48432361}
+  - component: {fileID: 48432362}
+  - component: {fileID: 48432363}
   m_Layer: 7
   m_Name: electroDragon
   m_TagString: Enemy
@@ -186,7 +187,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.4428215, y: 19.34393}
   m_EdgeRadius: 0
---- !u!114 &48432361
+--- !u!114 &48432362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48432358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940479bcfdb32934b94c35d0883725ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 7
+  speed: 15
+  target: {fileID: 909160350}
+  minDistance: 45
+  projectile: {fileID: 1254575661555187748, guid: be29c9a2b36b18f41a1fe5c09ecce8be, type: 3}
+  timeBetweenShots: 3
+  nextShotTime: 0
+  aiType: 1
+--- !u!114 &48432363
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -198,10 +219,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 033d4f0f1504cfb41a35327ef047cf1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 7
   speed: 15
   target: {fileID: 909160350}
-  minDistance: 15
+  minDistance: 20
+  projectile: {fileID: 1254575661555187748, guid: be29c9a2b36b18f41a1fe5c09ecce8be, type: 3}
+  timeBetweenShots: 3
+  aiType: 1
 --- !u!1 &279931219
 GameObject:
   m_ObjectHideFlags: 0
@@ -1881,6 +1905,9 @@ MonoBehaviour:
   speed: 20
   target: {fileID: 909160350}
   minDistance: 15
+  projectile: {fileID: 0}
+  timeBetweenShots: 0
+  aiType: 2
 --- !u!1 &1934371993
 GameObject:
   m_ObjectHideFlags: 0
