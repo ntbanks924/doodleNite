@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -163,7 +163,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1315
-        y: 1751
+        y: 1755
         width: 148
         height: 161
       alignment: 9
@@ -254,6 +254,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       rFoot: -921561280
+      player_0: 42189432
       head: 1934543318
       rHand: 489985328
       lFoot: -1688711605
