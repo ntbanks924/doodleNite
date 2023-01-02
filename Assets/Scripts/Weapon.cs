@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Weapon : MonoBehaviour{
     
@@ -26,6 +27,8 @@ public class Weapon : MonoBehaviour{
             {
                 Instantiate(projectile, shotPoint.position, transform.rotation);
                 timeBtwShots = startTimeBtwShots;
+                ///pew pew noises
+                GetComponent<AudioSource>().Play();
             }
         }
         else {

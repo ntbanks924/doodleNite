@@ -47,17 +47,17 @@ public class PlayerController : MonoBehaviour
     /// <summary>
     /// Determines which direction the character should face, currently only handles left (which may be all you need).
     /// </summary>
-    // void updatePlayerDirection() 
-    // {
-    //     switch (Input.GetAxisRaw("Horizontal")) {
-    //         case 1: // right
-    //             transform.localScale = new Vector3(1,1);
-    //             break;
-    //         case 0: // neutral - no direction
-    //             break;
-    //         case -1: // left
-    //             transform.localScale = new Vector3(-1, 1);
-    //             break;
-    //     }
-    // }
+    void updatePlayerDirection() 
+    {
+         switch (Input.GetAxisRaw("Horizontal")) {
+             case 1: // right
+                 transform.localScale = new Vector3(1,1);
+                 break;
+             case 0: // neutral - no direction
+                 break;
+             case -1: // left
+                 transform.localScale = new Vector3(-1, 1);
+                 break;
+        }
+     }
 }
